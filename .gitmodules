@@ -1,0 +1,6 @@
+[submodule "2. sem/ivs/proj2/IVS 2.proj"]
+	path = 2. sem/ivs/proj2/IVS 2.proj
+	url = git@REMOTE_URL:C:/repository/git/FIT/Projects/2. sem/ivs/proj2/IVS 2. proj/
+[submodule "2. sem/ivs/proj3/Paprika"]
+	path = 2. sem/ivs/proj3/Paprika
+	url = git@REMOTE_URL:/2. sem/ivs/proj3/Paprika/
