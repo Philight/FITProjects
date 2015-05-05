@@ -1,0 +1,198 @@
+#!/bin/bash
+
+## wedi opts:  
+#		, 
+#		[address],
+#		subor
+#		-m [address], 
+#		-l [address],  
+#		-b | -a date [address]
+##############################
+: <<'comment'
+while getopts ":mlb" runcode; 
+do
+	case "$runcode" in
+		m) echo "m" shift;;
+		l) echo "l" shift;;
+		b) echo "b" shift;;
+		*) echo "hehe" shift;;
+		
+	esac
+done
+comment
+#############################
+
+#////////////////////////////////////////////////////////////////////////////
+#--------------------------------FUNKCIE-------------------------------------
+#////////////////////////////////////////////////////////////////////////////
+return_error()
+{
+	errorcode="$1"
+	case $errorcode in
+		1) ## EDITOR
+		errormsg="Nenastaveny editor"
+		;;
+
+		2) ## WEDI_RC
+		errormsg="Nenastavena cesta WEDI_RC"
+		;;
+
+		3)
+		errormsg="Chybne argumenty"
+		;;
+
+		4)
+		errormsg="V danom adresari nebol editovany este ziadny subor"
+		;;
+	esac
+
+	echo "$errormsg" >&2
+	exit $errorcode
+}
+
+get_date()
+{
+	date +%F" "%T ## Y/M/D H/M/S
+}
+#--------------
+# Sort list
+#--------------
+sort_list()
+{ 
+	sort -k2,2 -k3,3 $WEDI_RC -o $WEDI_RC 
+}
+
+#----------------------
+# open file with editor
+#----------------------
+open_file()
+{
+	if ! $EDIT $1; then 
+		echo "Vyskytol sa problem pri otvarani suboru"
+		exit
+	fi 
+	{ printf "$1 "; get_date; } >> $WEDI_RC ## add fileaddress
+	sort_list
+	exit 0
+}
+
+m_func()
+{
+		lastline=$(grep -c $1 $WEDI_RC) ## count of lines with "address"
+		if [ "$lastline" -eq 0 ]; then return_error 4; fi
+		count="1"
+		max="0"
+		linecount=""
+		while [ $count -le $lastline ]
+		do	
+			tfile=$(awk -F, '$1 ~ "'$1'"' $WEDI_RC | awk 'NR == '$count' { print $1; exit }')
+			linecount=$(grep -c $tfile $WEDI_RC)
+
+			if [ "$linecount" -gt "$max" ]; then 
+				max=$linecount
+				file=$tfile
+			fi
+			
+			let count+=1
+		done
+
+		open_file $file
+}
+
+#//////////////////////////////////////////
+# -------------Nastavene cesty------------
+#/////////////////////////////////////////
+
+#WEDI_RC="/home/lai/bin/wedi_rc"
+#EDITOR="nano"
+
+EDIT=$EDITOR
+if [[ ! $EDITOR ]]; then ## unset/empty var. = true
+	if [[ ! $VISUAL ]]; then 
+	return_error 1
+	fi
+	EDIT=$VISUAL
+fi
+
+if [[ ! $WEDI_RC ]]; then 
+	return_error 2
+fi
+sort_list
+
+#////////////////////////////////////////////////////////////////////////////////
+#--------------------------------ZACIATOK SKRIPTU--------------------------------
+#////////////////////////////////////////////////////////////////////////////////
+if [ $# -eq 0 ]; then ## no arg.
+	address=$(pwd)
+
+	file=$(sort -k2,2r -k3,3r $WEDI_RC | awk '$1 ~ "'$address'" {print $1; exit}')
+
+	open_file $file
+fi
+if [ "$#" == 1 ]; then
+	if [ -f "$1" ]; then # [ -f "$1" ] && file="$1"  ## 1 argument(file)
+		file=$(readlink -f "$1") ## read fullpath
+
+		open_file $file
+	elif [ -d "$1" ]; then ## 1 argument(directory), latest edited file
+		address=$1 
+
+		file=$(sort -k2,2r -k3,3r $WEDI_RC | awk '$1 ~ "'$address'" {print $1; exit}')
+		
+		open_file $file
+	elif [ $1 == "-m" ]; then
+		address=$(pwd)
+
+		m_func $address
+	else
+		return_error 3
+	fi
+fi
+
+while [[ $# > 1 ]]
+do
+	arg="$1"
+
+	case $arg in
+   		-m) #//////////////////////////////////////////////
+    		address="$2"
+		m_func $address
+
+		;;
+
+   		-l) #//////////////////////////////////////////////
+
+		if [ "$#" -ne "2" ] || [ ! -d "$2" ]; then
+			return_error 3
+		fi
+
+   		address="$2"	
+		awk '$1 ~ "'$address'" { print $1 }' $WEDI_RC | sort -u | xargs -n1 basename
+		exit 0;;
+
+  		-b) #//////////////////////////////////////////////
+
+		if [ ! "$#" -eq 3 ] || [ ! -d "$3" ]; then
+			return_error 3
+		fi
+
+		date="$2"
+		address="$3"
+		awk ' $2 <= "'$date'" ' $WEDI_RC | awk '$1 ~ "'$address'" { print $1 }' | sort -u | xargs -n1 basename
+		exit 0;;
+
+		-a) #//////////////////////////////////////////////
+
+		if [ ! "$#" -eq 3 ] || [ ! -d "$3" ]; then
+			return_error 3
+		fi
+		date="$2"
+		address="$3"
+
+		awk ' $2 >= "'$date'" ' $WEDI_RC | awk '$1 ~ "'$address'" { print $1 }' | sort -u | xargs -n1 basename
+		exit 0;;
+
+		*) #//////////////////////////////////////////////
+		return_error 3;;
+	esac
+done
