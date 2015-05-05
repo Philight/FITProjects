@@ -4,3 +4,9 @@
 [submodule "2. sem/ivs/proj3/Paprika"]
 	path = 2. sem/ivs/proj3/Paprika
 	url = git@REMOTE_URL:/2. sem/ivs/proj3/Paprika/
+[submodule "2. sem/ivs/proj3/PaprikaCalc"]
+	path = 2. sem/ivs/proj3/PaprikaCalc
+	url = C:/submodule/paprika/paprika
+[submodule "2. sem/IVS/proj2/BitParity"]
+	path = 2. sem/IVS/proj2/BitParity
+	url = C:\\IVS 2.proj
