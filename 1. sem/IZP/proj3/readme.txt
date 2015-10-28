@@ -1,0 +1,1 @@
+hodnotenie: 4/10

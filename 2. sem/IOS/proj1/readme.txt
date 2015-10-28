@@ -1,0 +1,1 @@
+Hodnotenie: 8/15

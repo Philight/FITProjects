@@ -1,0 +1,1 @@
+Hodnotenie: 20/30
