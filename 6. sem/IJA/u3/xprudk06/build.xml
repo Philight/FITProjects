@@ -1,0 +1,43 @@
+<project>
+
+    <target name="clean">
+        <delete includeEmptyDirs="true">
+            <fileset dir="build" includes="**/*"/>
+        </delete>
+        <delete includeEmptyDirs="true">
+            <fileset dir="dest-client" includes="**/*" defaultexcludes="no"/>
+        </delete>
+        <delete includeEmptyDirs="true">
+            <fileset dir="doc" includes="**/*" defaultexcludes="no"/>
+        </delete>
+        <delete includeEmptyDirs="true">
+            <fileset dir="lib" includes="**/*">
+                <exclude name="get-libs.sh"/>
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="compile">
+        <javac srcdir="src" destdir="build">
+            <classpath>
+                <fileset dir="lib">
+                  <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+
+        <jar destfile="dest-client/ija-client.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="ija.Construct"/>
+            </manifest>
+            <fileset dir="lib">
+                <include name="resources/**" />
+           </fileset>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="dest-client/ija-client.jar" fork="true"/>
+    </target>
+
+</project>

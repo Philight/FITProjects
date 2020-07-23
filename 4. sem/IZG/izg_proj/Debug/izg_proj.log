@@ -1,0 +1,35 @@
+﻿Build started 2.5.2016 0:15:09.
+     1>Project "C:\repository\git\FIT\Projects\4. sem\IZG\izg_proj\izg_proj.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"..\SDL-1.2.15\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt bmp.c color.c main.c model.c render.c student.c transform.c vector.c
+         vector.c
+         transform.c
+         student.c
+     1>c:\repository\git\fit\projects\4. sem\izg\izg_proj\student.c(421): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+     1>c:\repository\git\fit\projects\4. sem\izg\izg_proj\student.c(424): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+     1>c:\repository\git\fit\projects\4. sem\izg\izg_proj\student.c(427): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+     1>c:\repository\git\fit\projects\4. sem\izg\izg_proj\student.c(430): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+         render.c
+         model.c
+         main.c
+         color.c
+         bmp.c
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\izg_proj.exe" /NOLOGO /LIBPATH:"..\SDL-1.2.15\lib\x86" SDL.lib SDLmain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:".\izg_proj.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\izg_proj.lib" /MACHINE:X86 /SAFESEH Debug\bmp.obj
+         Debug\color.obj
+         Debug\main.obj
+         Debug\model.obj
+         Debug\render.obj
+         Debug\student.obj
+         Debug\transform.obj
+         Debug\vector.obj
+     1>bmp.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     1>MSVCRTD.lib(initializers.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>SDLmain.lib(SDL_win32_main.obj) : warning LNK4099: PDB 'SDLmain.pdb' was not found with 'SDLmain.lib(SDL_win32_main.obj)' or at 'C:\repository\git\FIT\Projects\4. sem\IZG\izg_proj\SDLmain.pdb'; linking object as if no debug info
+         izg_proj.vcxproj -> C:\repository\git\FIT\Projects\4. sem\IZG\izg_proj\.\izg_proj.exe
+     1>Done Building Project "C:\repository\git\FIT\Projects\4. sem\IZG\izg_proj\izg_proj.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.59

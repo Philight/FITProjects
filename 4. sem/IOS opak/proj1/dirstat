@@ -1,0 +1,180 @@
+#!/bin/bash
+
+## find . -type d -printf '%d\n' | sort -n
+## ls -lp | grep -v /	## list all non-directory files
+## find . -printf '%f\n' | tail -n +2
+## grep pattern file | xargs
+## paste <(echo "$fileextensions0") -s -d,
+
+errormessage()
+# ==============================================================================================
+#  )-)-)-)-)-)-)-)-)-)-)-)-)-)-)-)-)-) ERROR HANDLING (-(-(-(-(-(-(-(-(-(-(-(-(-(-(-(-(-(-(-(-(
+# ==============================================================================================
+{
+	errorcode="$1"
+	path="$2"
+	case $errorcode in
+		1) ## EDITOR
+		errormsg="Wrong input"
+		;;
+
+		2) ## Invalid Directory Path
+		errormsg="\"$path\" is not a directory"
+		;;
+
+		3) ## Regexp = rootdir
+		errormsg="Rootdir cant be in RegExp"
+		;;
+	esac
+
+	echo "$errormsg" >&2
+	exit $errorcode
+}
+
+run_statistics()
+#   #################################################################################################
+#  ///////////////////////////////////////// MAIN FUNCTION /////////////////////////////////////////
+# #################################################################################################
+{
+	address="$1"
+	regexp="$2"
+
+	echo Root directory: "$address"
+	if [ -z "$regexp" ]; then
+		dircount=$(find "$address" -type d | wc -l)
+	else
+		dircount=$(find "$address" -type d | egrep -v "$regexp" | wc -l)
+	fi
+	echo Directories: "$dircount"
+
+	if [ -z "$regexp" ]; then
+		depthcount=$(find "$address" -type d -printf '%d\n' | sort -n | tail -1)
+	else
+		depthcount=$(find "$address" -type d -printf '%d-%p\n' | egrep -v "$regexp" | cut -d"-" -f1 | sort -n | tail -1)
+	fi
+	let depthcount+=1
+	echo Max depth: "$depthcount"
+
+	if [ -z "$regexp" ]; then
+		filescount=$(find "$address" -type f | wc -l)
+	else
+		filescount=$(find "$address" -type f | egrep -v "$regexp" | wc -l)
+	fi
+	echo Average no. of files: `expr $filescount / $dircount`
+	echo All files: "$filescount"
+
+	if [ -z "$regexp" ]; then
+		filelargest=$(find "$address" -type f -printf '%s\n' | sort -n | tail -1)
+	else
+		filelargest=$(find "$address" -type f -printf '%s-%p\n' | egrep -v "$regexp" | cut -d"-" -f1 | sort -n | tail -1)
+	fi
+	if [ "$filelargest" -eq 0 ]; then
+		filelargest="N/A"
+	fi
+	echo -e " Largest file: $filelargest"
+
+	filesizesum=$(find "$address" -type f -printf '%s\n' | awk '{sum += $1} END {print sum}')
+	if [[ "$filescount" -eq 0 ]]; then
+		filesizeavg="N/A"
+		filesizemedian="N/A"
+	else
+		filesizeavg=`expr $filesizesum / $filescount`
+
+		midval=$((filescount/2))
+		midval2="$midval"
+		let midval2+=1
+		if [ $((filescount%2)) -eq 1 ]; then
+			# filecount is uneven, choose middle value
+			filesizemedian=$(find "$address" -type f -printf '%s\n' | sort -n | awk "NR==$midval2")
+		else
+			# filecount is even, make average of middle values
+			filesizemedian=$(find "$address" -type f -printf '%s\n' | sort -n | awk "NR==$midval,NR==$midval2"'{OFMT ="%.0f"} {sum += $1} END {print sum/2}')
+		fi 																		
+	fi
+	echo -e " Average file size: $filesizeavg"
+	echo -e	" File size median: $filesizemedian"
+
+	fileextensions0=$(find "$address" -printf '%f\n' | grep -F "." | tail -n +2 | awk -F'.' '{print $2}' | sort -u)
+	fileextensions1=$(paste <(echo "$fileextensions0") -s -d,)	# Format for print
+	echo File extensions: "$fileextensions1"
+	
+
+	if [ ! -z "$fileextensions0" ]; then
+	## Statistics for each file extension, if they exist
+
+		extlist=$(echo "$fileextensions0" | tr '\n' ' ')
+		while [ ! -z "$extlist" ]
+		do
+			eachextension=$(echo "$extlist" | cut -d' ' -f1)
+			extoccurence=$(find "$address" -printf '%f\n' | grep ".${eachextension}\>" | awk -F'.' '{print $2}' | wc -l)
+			echo Files ."$eachextension": "$extoccurence"
+
+			largestext=$(find "$address" -printf '%s-%f\n' | grep ".${eachextension}\>" | awk -F'-' '{print $1}' | sort -n | tail -1)
+			if [ "$largestext" -eq 0 ]; then
+				largestext="N/A"
+			fi
+			echo " "Largest file ."$eachextension": "$largestext"
+
+			extsum=$(find "$address" -printf '%s-%f\n' | grep ".${eachextension}\>" | awk -F'-' '{print $1}' | awk '{sum += $1} END {print sum}')
+			echo " "Average file size "$eachextension": `expr $extsum / $extoccurence`
+
+			midval=$((extoccurence/2))
+			midval2="$midval"
+			let midval2+=1
+			if [ $((extoccurence%2)) -eq 1 ]; then
+				# extcount is uneven, choose middle value
+				extmedian=$(find "$address" -printf '%s-%f\n' | grep ".${eachextension}\>" | awk -F'-' '{print $1}' | sort -n | awk "NR==$midval2")
+			else
+				# extcount is even, make average of middle values
+				extmedian=$(find "$address" -printf '%s-%f\n' | grep ".${eachextension}\>" | awk -F'-' '{print $1}' | sort -n | awk "NR==$midval,NR==$midval2"'{OFMT ="%.0f"} {sum+= $1} END {print sum/2}')
+			fi 	
+				echo " "File size median "$eachextension": "$extmedian"
+
+			extlist=$(echo "$extlist" | cut -d' ' -f2-)	# cut extension from list
+		done
+	fi
+}
+
+# --<<--<@--<<--<@--<<--<@--<<--<@--<<--<@--<<--<@--<<--<@--<<--<@--<<--<@--<<--<@--<<--<@--<<--<@ 
+#  ((((((((((((((((((((((((((((((((((((((( INPUT ARGUMENTS ))))))))))))))))))))))))))))))))))))))
+# @>-->>--@>-->>--@>-->>--@>-->>--@>-->>--@>-->>--@>-->>--@>-->>--@>-->>--@>-->>--@>-->>--@>-->>--
+if [ $# -eq 0 ]; then
+# /////////////////////////// 0 Arguments, CURRENT DIRECTORY //////////////////
+	address=$(pwd) # cwd
+	run_statistics "$address"
+	
+elif [ "$#" == 1 ]; then
+# /////////////////////////// 1 Argument, ADDRESS PATH ////////////////////
+	if [ ! -d "$1" ]; then
+		errormessage 2 "$1"
+	fi
+	path="$1"
+	run_statistics "$path"
+
+elif [[ "$#" == 2  ]]; then
+# /////////////////////////// 2 Arguments, REGEXP, CURRENT DIR ////////////////////
+	if [ "$1" == "-i" ]; then
+		regexp="$2"
+		address=$(pwd) # cwd
+		run_statistics "$address" "$regexp"
+	else
+		errormessage 1
+	fi
+
+elif [ "$#" == 3 ]; then
+# /////////////////////////// 3 Arguments, REGEXP, ADDRESS PATH ////////////////////
+	if [ "$1" == "-i" ]; then
+		if [ ! -d "$3" ]; then
+			errormessage 2 "$3" 
+		fi
+		regexp="$2"
+		path="$3"	
+		run_statistics "$path" "$regexp"
+	else
+		errormessage 1
+	fi
+
+else
+# /////////////////////////// INVALID INPUT /////////////////////////////
+	errormessage 1
+fi
