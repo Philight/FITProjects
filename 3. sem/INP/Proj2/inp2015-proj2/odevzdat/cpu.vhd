@@ -1,4 +1,4 @@
--- cpu.vhd: Simple 8-bit CPU (BrainFuck interpreter)
+-- cpu.vhd: Simple 8-bit CPU (Brainlove interpreter)
 -- Copyright (C) 2015 Brno University of Technology,
 --                    Faculty of Information Technology
 -- Author(s): Truong Lai Nhat Tuan (xlainh00)
