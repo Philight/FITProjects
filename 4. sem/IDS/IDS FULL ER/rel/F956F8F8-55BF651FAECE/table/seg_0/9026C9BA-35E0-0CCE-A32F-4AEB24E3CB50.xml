@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9026C9BA-35E0-0CCE-A32F-4AEB24E3CB50" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="EXEMPLAR">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>EXEMPLAR</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_EXEMPLAR" id="4D003D10-6CB2-1997-041C-A0B1F3F3FF5F">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>EXEMPLAR</sourceObjSchema>
+<sourceObjName>ID_EXEMPLAR</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TITUL" id="C3E31937-58BA-3C58-1BD2-13D76BECC4D4">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>EXEMPLAR</sourceObjSchema>
+<sourceObjName>ID_TITUL</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33BFC544-4B20-E8B7-F22F-09573ECD618A" referredColumn="52DFC09D-282E-0B11-1D66-044492B9F6DF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE5ECE18-3CE3-2A2E-8383-8A82C1972303" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="EXEMPLAR_PK">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>SYS_C001369590</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:22 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D003D10-6CB2-1997-041C-A0B1F3F3FF5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5CA254D0-C09B-153F-00B5-C05D87E5BDCF" name="SYS_C001369623">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3E31937-58BA-3C58-1BD2-13D76BECC4D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

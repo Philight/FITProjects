@@ -1,0 +1,187 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8B473E96-2228-EE86-3DDD-2F3FB63DB097" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="VYPUJCKA">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>VYPUJCKA</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VYPUJCKA" id="EFB475F5-1F97-482E-1B23-A82FF3D63D48">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>VYPUJCKA</sourceObjSchema>
+<sourceObjName>ID_VYPUJCKA</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATUM_OD" id="68E76CA3-ADF7-07EF-0382-A481137F3784">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>VYPUJCKA</sourceObjSchema>
+<sourceObjName>DATUM_OD</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATUM_DO" id="79B7CC14-89B0-6927-DD4F-460E28173368">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>VYPUJCKA</sourceObjSchema>
+<sourceObjName>DATUM_DO</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ZAMESTNANEC_VYTVORIL" id="546D01CE-7E7C-28CA-060B-C4CBC3350565">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>VYPUJCKA</sourceObjSchema>
+<sourceObjName>ID_ZAMESTNANEC_VYTVORIL</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A05FB61-35B8-6AEC-C596-46DF01A577CE" referredColumn="01F9A5DC-A02E-0828-0D30-E7B1AD6CF351"/>
+</associations>
+</Column>
+<Column name="ID_ZAMESTNANEC_UZAVREL" id="3B8AFBD5-6202-D1FB-B092-4047286505F0">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>VYPUJCKA</sourceObjSchema>
+<sourceObjName>ID_ZAMESTNANEC_UZAVREL</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE149BDF-29B6-12B2-AD80-35B457F67D69" referredColumn="01F9A5DC-A02E-0828-0D30-E7B1AD6CF351"/>
+</associations>
+</Column>
+<Column name="ID_CTENAR" id="41D30A67-A8C4-1BC5-F5B3-96E1B47A6FF4">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>VYPUJCKA</sourceObjSchema>
+<sourceObjName>ID_CTENAR</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="69653C46-37CB-29B5-2E7C-D95E5E46937D" referredColumn="825DD2A8-83D7-F165-C5F3-06F8686C23C0"/>
+</associations>
+</Column>
+<Column name="ID_EXEMPLAR" id="EE0C17BE-96FF-6CE5-DB1E-DF67AA2DAFBA">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>VYPUJCKA</sourceObjSchema>
+<sourceObjName>ID_EXEMPLAR</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51FB08AD-27F1-84AD-4EC3-BB6547A33BB4" referredColumn="4D003D10-6CB2-1997-041C-A0B1F3F3FF5F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D5FCCB10-5E27-E1E4-AB7F-DE8705CD8AE6" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="VYPUJCKA_PK">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>SYS_C001369611</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:22 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFB475F5-1F97-482E-1B23-A82FF3D63D48"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E41FEC6-8F2A-D681-9877-EE84C64F391B" name="SYS_C001369626">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="546D01CE-7E7C-28CA-060B-C4CBC3350565"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="680EF29B-5391-475B-2DDA-669D8ED0AAD6" name="SYS_C001369627">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B8AFBD5-6202-D1FB-B092-4047286505F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="346B42DE-9FAE-9BEE-F8EC-6FDF09B10E82" name="SYS_C001369628">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41D30A67-A8C4-1BC5-F5B3-96E1B47A6FF4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B9FF2BA-7806-B070-3306-99E3659E7ACD" name="SYS_C001369629">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE0C17BE-96FF-6CE5-DB1E-DF67AA2DAFBA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

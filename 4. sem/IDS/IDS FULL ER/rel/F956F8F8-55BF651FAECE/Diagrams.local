@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="6BF10645-4F01-E559-38FB-B39544E8F6D8" name="IDS.FIT.DATABASE" visible="true"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

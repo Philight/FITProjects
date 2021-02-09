@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="AUTOR" directorySegmentName="seg_0" id="6341E314-EF14-CAAC-FAC6-099910C31BD0">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:18 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<schemaObject>DDAFBE50-0256-DFBE-DBDF-42D61C4740C5</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>E3B05756-169D-3CEF-D3BE-E922E61BFC37</segment>
+<tableSpace>AD6028CC-6B3C-A414-0573-C9ED520846DC</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DATUM_NAROZENI" id="038E08C2-2873-D665-87D3-2E05B6C5EE06">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_AUTOR" id="059DF5ED-E2DB-9F3B-9E2E-C0F93E220AD6">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="JMENO" id="05E9457A-36ED-ECA6-382E-555181BCCFC6">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATUM_UMRTI" id="2CC8ADE1-7376-8E6C-DFA9-5CB1F4C7B592">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<defaultValue>NULL</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="PRIJMENI" id="89C49EB4-F5D0-FB9F-508E-12FB17DD56EF">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="AUTOR_PK" id="4E13706A-0E68-5CB9-1D08-3096B09C1CA1">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:23 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<schemaObject>DDAFBE50-0256-DFBE-DBDF-42D61C4740C5</schemaObject>
+<segment>3CCF991A-7E2B-32F3-53C2-C3F996B69AAC</segment>
+<tableSpace>AD6028CC-6B3C-A414-0573-C9ED520846DC</tableSpace>
+<indexSegment>3CCF991A-7E2B-32F3-53C2-C3F996B69AAC</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

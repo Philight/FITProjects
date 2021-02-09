@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="XLAINH00" directorySegmentName="seg_0" id="F6B5081F-2759-FE0E-4848-E46108517C1B">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjName>XLAINH00</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:18 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<schemaObject>DDAFBE50-0256-DFBE-DBDF-42D61C4740C5</schemaObject>
+</UserOraclev10g>

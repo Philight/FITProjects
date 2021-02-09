@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0C146066-1951-BC06-2637-61D06272752A" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="ZAMESTNANEC">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>ZAMESTNANEC</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ZAMESTNANEC" id="01F9A5DC-A02E-0828-0D30-E7B1AD6CF351">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>ID_ZAMESTNANEC</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JMENO" id="0CA98896-F967-31B7-3DD6-16DB20F9D980">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>JMENO</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIJMENI" id="5295094A-11E9-0C82-0EA8-356A78748B7E">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>PRIJMENI</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATUM_NAROZENI" id="DD1D1FA1-9006-CC45-71F3-34F4FC3FE629">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>DATUM_NAROZENI</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FUNKCE" id="EE81494A-6F2D-62E7-9ADA-089BB82AA734">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>FUNKCE</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGIN" id="1420A5FD-4779-3AF5-2830-25E76CA999D1">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>LOGIN</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HESLO" id="BB6F27EC-E902-CD78-B03D-CA4B77069E74">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>HESLO</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 BYTE</dataTypeSize>
+<ownDataTypeParameters>32 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROLE" id="739582CD-8C03-69A4-99A7-4963B803724F">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>ZAMESTNANEC</sourceObjSchema>
+<sourceObjName>ROLE</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<constraintName>SYS_C001369619</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12c" definition=" role=&apos;user&apos; OR role=&apos;admin&apos; "/>
+</checkConstraint>
+<ownDataTypeParameters>16 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="60D82DD5-D3BB-E48C-C1A8-EB3645CBEA07" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="ZAMESTNANEC_PK">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>SYS_C001369620</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:22 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01F9A5DC-A02E-0828-0D30-E7B1AD6CF351"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="IDS FULL ER" id="BBA79927-6BB1-58F3-70DC-DF209DB7BF4C" version="3.5">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:04:53 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BBA79927-6BB1-58F3-70DC-DF209DB7BF4C</designId>
+</OSDM_Design>

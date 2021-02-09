@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC050BF1-57EA-5EAF-76A3-530E14D31CA1" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="CTENAR">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>CTENAR</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CTENAR" id="825DD2A8-83D7-F165-C5F3-06F8686C23C0">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>ID_CTENAR</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JMENO" id="CED9681E-F5C8-B561-9C75-BC7204D3709E">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>JMENO</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIJMENI" id="06AEBC55-9FD6-EFCF-AE1B-1C11F6D4B82D">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>PRIJMENI</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATUM_NAROZENI" id="D99C9C59-6572-23E5-F698-9181991AB077">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>DATUM_NAROZENI</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADRESA" id="A23DCD96-1E44-C024-D772-5281710F6DBC">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>ADRESA</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFON" id="7363266B-CC5E-E814-275D-AE6D70C797B7">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>TELEFON</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 BYTE</dataTypeSize>
+<ownDataTypeParameters>16 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGIN" id="45E7CC69-0ED0-BF4E-095D-960B12802274">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>LOGIN</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 BYTE</dataTypeSize>
+<ownDataTypeParameters>32 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HESLO" id="1D4A7A3B-E845-C18E-F0CB-397B89B89CE6">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>CTENAR</sourceObjSchema>
+<sourceObjName>HESLO</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 BYTE</dataTypeSize>
+<ownDataTypeParameters>256 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9A3B3F2A-C738-D930-28AC-B1B2019D0EEA" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="CTENAR_PK">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>SYS_C001369599</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:22 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="825DD2A8-83D7-F165-C5F3-06F8686C23C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

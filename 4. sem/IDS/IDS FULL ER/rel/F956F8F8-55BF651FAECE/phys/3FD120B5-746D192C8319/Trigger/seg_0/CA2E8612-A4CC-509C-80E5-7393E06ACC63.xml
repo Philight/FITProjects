@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="ISBN_CHECK" directorySegmentName="seg_0" id="CA2E8612-A4CC-509C-80E5-7393E06ACC63">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>ISBN_CHECK</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body>DECLARE&lt;br/&gt;  numberint int;&lt;br/&gt;  number_string VARCHAR2(50);&lt;br/&gt;BEGIN&lt;br/&gt;  SELECT REPLACE(:new.ISBN,&apos;-&apos;,NULL) INTO numberint FROM dual;  -- &apos;80-7309-999-3&apos; ==&gt; &apos;8073099993&apos;&lt;br/&gt;  number_string := LTRIM(TO_CHAR(numberint,&apos;9999999999999&apos;));  &lt;br/&gt;  numberint := 0;&lt;br/&gt;  ----------------------------------------------------------------------&lt;br/&gt;  IF LENGTH(number_string) = 13 THEN -- ISBN-13, since 2007&lt;br/&gt;    FOR i IN 1 .. LENGTH(number_string)-1 LOOP&lt;br/&gt;      IF MOD(i,2) = 0 THEN  --  even&lt;br/&gt;        numberint := numberint + TO_NUMBER(SUBSTR(number_string,i,1))*3;&lt;br/&gt;      ELSE&lt;br/&gt;        numberint := numberint + TO_NUMBER(SUBSTR(number_string,i,1))*1;&lt;br/&gt;      END IF;&lt;br/&gt;    END LOOP;&lt;br/&gt;&lt;br/&gt;    IF ( MOD(numberint,10) + TO_NUMBER(SUBSTR(number_string,13,1)) &lt;&gt; 10 ) THEN&lt;br/&gt;       RAISE_APPLICATION_ERROR(-20100,&apos;Invalid ISBN-13&apos;);&lt;br/&gt;    END IF;&lt;br/&gt;  ----------------------------------------------------------------------&lt;br/&gt;  ELSIF LENGTH(number_string) = 10 THEN  -- old ISBN-10 &lt;br/&gt;    FOR i IN 1 .. LENGTH(number_string) LOOP&lt;br/&gt;      numberint := numberint + TO_NUMBER(SUBSTR(number_string,i,1))*i;&lt;br/&gt;    END LOOP;&lt;br/&gt;&lt;br/&gt;    IF MOD(numberint,11) &gt; 0 THEN&lt;br/&gt;      RAISE_APPLICATION_ERROR(-20100,&apos;Invalid ISBN-10&apos;);&lt;br/&gt;    END IF;&lt;br/&gt;  -----------------------------------------------------------------------&lt;br/&gt;  ELSE&lt;br/&gt;    RAISE_APPLICATION_ERROR(-20100,&apos;Invalid ISBN length&apos;);&lt;br/&gt;  END IF;&lt;br/&gt;  &lt;br/&gt;END;</body>
+<triggerTime>BEFORE</triggerTime>
+<owner>F6B5081F-2759-FE0E-4848-E46108517C1B</owner>
+<table>38E380D0-0950-9280-F99A-6466D50F0946</table>
+</TriggerOraclev10g>

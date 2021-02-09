@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D9588C79-53F7-68D6-5B51-31D33F2430F6" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="AUTOR_TITUL">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>AUTOR_TITUL</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:19 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_AUTOR_TITUL" id="494BD0AE-C90D-410E-9E38-84FA83F0E19A">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>AUTOR_TITUL</sourceObjSchema>
+<sourceObjName>ID_AUTOR_TITUL</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_AUTOR" id="DDE52F54-2F2E-F46F-372B-4D1D73DDF4A7">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>AUTOR_TITUL</sourceObjSchema>
+<sourceObjName>ID_AUTOR</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="852FBA97-BB41-867C-B834-9369F899ACED" referredColumn="059DF5ED-E2DB-9F3B-9E2E-C0F93E220AD6"/>
+</associations>
+</Column>
+<Column name="ID_TITUL" id="CC43125C-4D73-7CB6-8695-DB085C3DE5CF">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>AUTOR_TITUL</sourceObjSchema>
+<sourceObjName>ID_TITUL</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:20 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC9A6F52-BA57-95FF-0399-CD47450EF35F" referredColumn="52DFC09D-282E-0B11-1D66-044492B9F6DF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="15A4B132-EC1C-B727-B2C5-2BDCD295D250" schemaObject="DDAFBE50-0256-DFBE-DBDF-42D61C4740C5" name="AUTOR_TITUL_PK">
+<sourceConnName>IDS.FIT.DATABASE</sourceConnName>
+<sourceObjSchema>XLAINH00</sourceObjSchema>
+<sourceObjName>SYS_C001369587</sourceObjName>
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:22 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="494BD0AE-C90D-410E-9E38-84FA83F0E19A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A27E007-0E32-C2F4-3044-3C4CE16D4E75" name="SYS_C001369621">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDE52F54-2F2E-F46F-372B-4D1D73DDF4A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="48AD7863-D749-8E98-3A84-D77F5AD87452" name="SYS_C001369622">
+<createdBy>Tinh</createdBy>
+<createdTime>2016-04-27 22:19:26 UTC</createdTime>
+<ownerDesignName>IDS FULL ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC43125C-4D73-7CB6-8695-DB085C3DE5CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
